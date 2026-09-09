@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="1200" height="350" role="img" aria-label="Architecture pattern: sources to ingest to index to route to reason to gate">
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+      .grid line { stroke:#7C8494; stroke-opacity:.06; stroke-width:1; }
+      .ttl { font-size:15px; font-weight:700; letter-spacing:.4px; fill:#F2F5FA; }
+      .sub { font-size:12px; fill:#6E7683; letter-spacing:.3px; }
+      .blab { font-size:10.5px; font-weight:700; letter-spacing:1.9px; }
+      .brow { font-size:10.5px; fill:#6E7683; letter-spacing:.1px; }
+      .met { font-size:10.5px; font-weight:700; letter-spacing:.9px; fill:#FFB454; }
+      .out { font-size:11.5px; fill:#6E7683; letter-spacing:.4px; }
+      .out tspan { fill:#D6DAE3; }
+      .dash { stroke-dasharray:5 5; animation:march .95s linear infinite; }
+      @keyframes march { to { stroke-dashoffset:-10; } }
+      @media (prefers-reduced-motion: reduce) { .dash { animation:none; } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="350" fill="#090A0D"/>
+  <g class="grid">
+    <line x1="50" y1="0" x2="50" y2="350"/>
+    <line x1="100" y1="0" x2="100" y2="350"/>
+    <line x1="150" y1="0" x2="150" y2="350"/>
+    <line x1="200" y1="0" x2="200" y2="350"/>
+    <line x1="250" y1="0" x2="250" y2="350"/>
+    <line x1="300" y1="0" x2="300" y2="350"/>
+    <line x1="350" y1="0" x2="350" y2="350"/>
+    <line x1="400" y1="0" x2="400" y2="350"/>
+    <line x1="450" y1="0" x2="450" y2="350"/>
+    <line x1="500" y1="0" x2="500" y2="350"/>
+    <line x1="550" y1="0" x2="550" y2="350"/>
+    <line x1="600" y1="0" x2="600" y2="350"/>
+    <line x1="650" y1="0" x2="650" y2="350"/>
+    <line x1="700" y1="0" x2="700" y2="350"/>
+    <line x1="750" y1="0" x2="750" y2="350"/>
+    <line x1="800" y1="0" x2="800" y2="350"/>
+    <line x1="850" y1="0" x2="850" y2="350"/>
+    <line x1="900" y1="0" x2="900" y2="350"/>
+    <line x1="950" y1="0" x2="950" y2="350"/>
+    <line x1="1000" y1="0" x2="1000" y2="350"/>
+    <line x1="1050" y1="0" x2="1050" y2="350"/>
+    <line x1="1100" y1="0" x2="1100" y2="350"/>
+    <line x1="1150" y1="0" x2="1150" y2="350"/>
+    <line x1="0" y1="50" x2="1200" y2="50"/>
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="250" x2="1200" y2="250"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+  </g>
+
+  <g class="mono">
+    <rect x="46" y="28" width="3" height="14" fill="#FFB454"/>
+    <text class="ttl" x="60" y="40">THE SHAPE OF EVERYTHING I BUILD</text>
+    <text class="sub" x="60" y="62">Streaming ingest into a live index, routed through agents, then stopped at deterministic gates.</text>
+    <text class="sub" x="60" y="81" fill="#6E7683">The interesting part is never the model &#8212; it is what the model is not allowed to do.</text>
+    
+  <g class="box b0">
+    <rect x="46" y="150" width="165" height="108" fill="#101218" stroke="#1E222C" stroke-width="1"/>
+    <line x1="46" y1="175" x2="211" y2="175" stroke="#1E222C" stroke-width="1"/>
+    <rect x="46" y="150" width="3" height="25" fill="#56E0C8"/>
+    <text class="blab" x="60" y="167" fill="#56E0C8">SOURCES</text>
+    <text class="brow" x="60" y="195">5 financial feeds</text>
+    <text class="brow" x="60" y="214">live match events</text>
+    <text class="brow" x="60" y="233">10K+ documents</text>
+  </g>
+  <g class="flow">
+    <line class="dash" x1="213" y1="204" x2="227" y2="204" stroke="#56E0C8" stroke-opacity=".75" stroke-width="1.6"/>
+    <path d="M224,200 L229,204 L224,208" fill="none" stroke="#56E0C8" stroke-opacity=".75" stroke-width="1.6"/>
+  </g>
+  <g class="box b1">
+    <rect x="231" y="150" width="165" height="108" fill="#101218" stroke="#1E222C" stroke-width="1"/>
+    <line x1="231" y1="175" x2="396" y2="175" stroke="#1E222C" stroke-width="1"/>
+    <rect x="231" y="150" width="3" height="25" fill="#56E0C8"/>
+    <text class="blab" x="245" y="167" fill="#56E0C8">INGEST</text>
+    <text class="brow" x="245" y="195">Kafka + Zookeeper</text>
+    <text class="brow" x="245" y="214">4 Pathway pipelines</text>
+    <text class="brow" x="245" y="233">adapter scrapers</text>
+  </g>
+  <g class="flow">
+    <line class="dash" x1="398" y1="204" x2="413" y2="204" stroke="#56E0C8" stroke-opacity=".75" stroke-width="1.6"/>
+    <path d="M410,200 L415,204 L410,208" fill="none" stroke="#56E0C8" stroke-opacity=".75" stroke-width="1.6"/>
+  </g>
+  <g class="box b2">
+    <rect x="417" y="150" width="165" height="108" fill="#101218" stroke="#1E222C" stroke-width="1"/>
+    <line x1="417" y1="175" x2="582" y2="175" stroke="#1E222C" stroke-width="1"/>
+    <rect x="417" y="150" width="3" height="25" fill="#FFB454"/>
+    <text class="blab" x="431" y="167" fill="#FFB454">INDEX</text>
+    <text class="brow" x="431" y="195">Pathway VectorStore</text>
+    <text class="brow" x="431" y="214">15+ market features</text>
+    <text class="brow" x="431" y="233">multi-modal embeds</text>
+  </g>
+  <g class="cal">
+    <line x1="499" y1="124" x2="499" y2="148" stroke="#FFB454" stroke-opacity=".45" stroke-width="1"/>
+    <rect x="436" y="101" width="128" height="23" fill="#090A0D" stroke="#FFB454" stroke-opacity=".5" stroke-width="1"/>
+    <text class="met" x="499" y="117" text-anchor="middle">sub-50 ms search</text>
+  </g>
+  <g class="flow">
+    <line class="dash" x1="584" y1="204" x2="598" y2="204" stroke="#56E0C8" stroke-opacity=".75" stroke-width="1.6"/>
+    <path d="M595,200 L600,204 L595,208" fill="none" stroke="#56E0C8" stroke-opacity=".75" stroke-width="1.6"/>
+  </g>
+  <g class="box b3">
+    <rect x="602" y="150" width="165" height="108" fill="#101218" stroke="#1E222C" stroke-width="1"/>
+    <line x1="602" y1="175" x2="767" y2="175" stroke="#1E222C" stroke-width="1"/>
+    <rect x="602" y="150" width="3" height="25" fill="#56E0C8"/>
+    <text class="blab" x="616" y="167" fill="#56E0C8">ROUTE</text>
+    <text class="brow" x="616" y="195">heuristic classifier</text>
+    <text class="brow" x="616" y="214">Hoeffding drift tree</text>
+    <text class="brow" x="616" y="233">KL / KS divergence</text>
+  </g>
+  <g class="flow">
+    <line class="dash" x1="769" y1="204" x2="784" y2="204" stroke="#56E0C8" stroke-opacity=".75" stroke-width="1.6"/>
+    <path d="M781,200 L786,204 L781,208" fill="none" stroke="#56E0C8" stroke-opacity=".75" stroke-width="1.6"/>
+  </g>
+  <g class="box b4">
+    <rect x="788" y="150" width="165" height="108" fill="#101218" stroke="#1E222C" stroke-width="1"/>
+    <line x1="788" y1="175" x2="953" y2="175" stroke="#1E222C" stroke-width="1"/>
+    <rect x="788" y="150" width="3" height="25" fill="#FFB454"/>
+    <text class="blab" x="802" y="167" fill="#FFB454">REASON</text>
+    <text class="brow" x="802" y="195">Leader-Analyst agents</text>
+    <text class="brow" x="802" y="214">Agno + Gemini / GPT-4o</text>
+    <text class="brow" x="802" y="233">planner subtasks</text>
+  </g>
+  <g class="cal">
+    <line x1="870" y1="124" x2="870" y2="148" stroke="#FFB454" stroke-opacity=".45" stroke-width="1"/>
+    <rect x="810" y="101" width="121" height="23" fill="#090A0D" stroke="#FFB454" stroke-opacity=".5" stroke-width="1"/>
+    <text class="met" x="870" y="117" text-anchor="middle">200 ms overhead</text>
+  </g>
+  <g class="flow">
+    <line class="dash" x1="955" y1="204" x2="969" y2="204" stroke="#56E0C8" stroke-opacity=".75" stroke-width="1.6"/>
+    <path d="M966,200 L971,204 L966,208" fill="none" stroke="#56E0C8" stroke-opacity=".75" stroke-width="1.6"/>
+  </g>
+  <g class="box b5">
+    <rect x="973" y="150" width="165" height="108" fill="#101218" stroke="#1E222C" stroke-width="1"/>
+    <line x1="973" y1="175" x2="1138" y2="175" stroke="#1E222C" stroke-width="1"/>
+    <rect x="973" y="150" width="3" height="25" fill="#FFB454"/>
+    <text class="blab" x="987" y="167" fill="#FFB454">GATE</text>
+    <text class="brow" x="987" y="195">4 fail-closed gates</text>
+    <text class="brow" x="987" y="214">evidence grounding</text>
+    <text class="brow" x="987" y="233">FSM transitions</text>
+  </g>
+  <g class="cal">
+    <line x1="1056" y1="124" x2="1056" y2="148" stroke="#FFB454" stroke-opacity=".45" stroke-width="1"/>
+    <rect x="982" y="101" width="147" height="23" fill="#090A0D" stroke="#FFB454" stroke-opacity=".5" stroke-width="1"/>
+    <text class="met" x="1056" y="117" text-anchor="middle">0.000 hallucination</text>
+  </g>
+    <text class="out" x="46" y="298">OUTPUT &#8594; <tspan>simulated paper trades</tspan> &#183; <tspan>ball-by-ball commentary</tspan> &#183; <tspan>regulator-readable underwriting narratives</tspan></text>
+  </g>
+  <rect x="0" y="347" width="1200" height="3" fill="#56E0C8" opacity=".7"/>
+</svg>
