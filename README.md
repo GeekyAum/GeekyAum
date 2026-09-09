@@ -1,188 +1,283 @@
-<img src="./assets/header.svg" width="100%" alt="Aum Vyas — full-stack engineer, agentic AI systems" />
-
-<div align="center">
-
-<a href="mailto:23ec01005@iitbbs.ac.in"><img src="https://img.shields.io/badge/23ec01005@iitbbs.ac.in-090A0D?style=for-the-badge&logo=maildotru&logoColor=FFB454&labelColor=090A0D" alt="Email"/></a>
-<a href="https://linkedin.com/in/aumvyas"><img src="https://img.shields.io/badge/aumvyas-090A0D?style=for-the-badge&logo=linkedin&logoColor=56E0C8&labelColor=090A0D" alt="LinkedIn"/></a>
-<a href="https://github.com/GeekyAum"><img src="https://img.shields.io/badge/GeekyAum-090A0D?style=for-the-badge&logo=github&logoColor=D6DAE3&labelColor=090A0D" alt="GitHub"/></a>
-
-</div>
-
-```console
-aum@github:~$ whoami
-
-  now      SWE Intern, Google AI Garage — Hyderabad
-  school   IIT Bhubaneswar, B.Tech ECE '27 · CGPA 8.98
-  build    streaming pipelines, multi-agent orchestration, deterministic gates
-  believe  an agent you cannot audit is a liability, not a feature
-  below    Verilog, RTL, FSMs — the abstraction leaks and I like knowing where
+```
+ █████╗ ██╗   ██╗███╗   ███╗    ██╗   ██╗██╗   ██╗ █████╗ ███████╗
+██╔══██╗██║   ██║████╗ ████║    ██║   ██║╚██╗ ██╔╝██╔══██╗██╔════╝
+███████║██║   ██║██╔████╔██║    ██║   ██║ ╚████╔╝ ███████║███████╗
+██╔══██║██║   ██║██║╚██╔╝██║    ╚██╗ ██╔╝  ╚██╔╝  ██╔══██║╚════██║
+██║  ██║╚██████╔╝██║ ╚═╝ ██║     ╚████╔╝    ██║   ██║  ██║███████║
+╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝      ╚═══╝     ╚═╝   ╚═╝  ╚═╝╚══════╝
+      i build agents that are not allowed to make things up
 ```
 
-<br/>
+```
+   \\ //
+   (o.o)    "oh — hi. didn't think anyone actually scrolled up here."
+  <(   )>~
+    ^ ^     "i'm chip. i live in this repo. i'll show you around."
+```
 
-<img src="./assets/systems.svg" width="100%" alt="Architecture pattern: sources → ingest → index → route → reason → gate" />
+|  |  |
+|---|---|
+| `[1]` [who even is this](#whoami) | `[4]` [what he can actually do](#stack) |
+| `[2]` [the three real ones](#work) | `[5]` [receipts](#proof) |
+| `[3]` [the google thing](#google) | `[6]` [how to reach him](#contact) |
 
-<br/>
+<br>
 
-## `~/work`
+<a id="whoami"></a>
+## `[1]` who even is this
 
-<table>
-<tr>
-<td width="50%" valign="top">
+```console
+$ whoami
 
-### 📈 [Meridian](https://github.com/GeekyAum/Meridian)
+  aum vyas  ·  @GeekyAum
+  b.tech electronics & communication '27  ·  iit bhubaneswar  ·  cgpa 8.98
+  swe intern @ google ai garage  ·  hyderabad  ·  may–aug 2026
 
-**Investment research that refuses to guess.** Ingests **5 financial sources** through **4 Kafka + Pathway** pipelines, exposing **15+ market features** over FastAPI on PostgreSQL and MongoDB.
+$ cat ~/.thesis
 
-Online **Hoeffding Adaptive Tree** drift detection over **300-tick sliding windows**, with KL/KS divergence tests and 2-confirmation debouncing streaming alerts via Kafka and SSE.
+  everyone can get a model to say something.
+  the hard part is making it prove it, and stopping it when it can't.
+  so i build the boring half: streaming ingest, live indexes,
+  routers, and gates that fail closed.
+```
 
-An **Agno + Gemini** decision service exposes **5 read-only MCP tools**, converting drift alerts into evidence-grounded paper-trading workflows behind **4 fail-closed policy gates**. Nothing touches real money — by design.
+```
+   \\ //
+   (o.o)    "he means it. every project down there has a part
+  <(   )>    whose entire job is telling the ai to shut up."
+    ^ ^
+```
 
-`260+ host tests` `18 integration tests` `offline-first`
+<br>
 
-<sub>**Python** · **FastAPI** · **Kafka** · **Pathway** · **PostgreSQL** · **MongoDB** · **Prometheus** · **Docker** · **Agno**</sub>
+<a id="work"></a>
+## `[2]` the three real ones
 
-</td>
-<td width="50%" valign="top">
+Everything he builds ends up the same shape. Chip drew it:
 
-### 🧭 [PathFin](https://github.com/GeekyAum/Dynamic-Agentic-RAG)
+```
+  ┌─────────────┐   ┌─────────────┐   ┌─────────────┐   ┌─────────────┐   ┌─────────────┐
+  │  1 INGEST   │──▶│  2 INDEX    │──▶│  3 ROUTE    │──▶│  4 REASON   │──▶│  5 GATE     │
+  ├─────────────┤   ├─────────────┤   ├─────────────┤   ├─────────────┤   ├─────────────┤
+  │ kafka       │   │ pathway     │   │ heuristic   │   │ leader ·    │   │ evidence    │
+  │ 4 pipelines │   │ vectorstore │   │ classifier  │   │ analyst     │   │ grounding   │
+  │ 5 feeds     │   │ 10k+ docs   │   │ drift tree  │   │ agents      │   │ 4 hard nos  │
+  └─────────────┘   └─────────────┘   └─────────────┘   └─────────────┘   └─────────────┘
+                       sub-50 ms                        200 ms overhead    fails closed
+  └───────────────── deterministic ─────────────────┘   └── the llm ──┘   └─── gated ───┘
 
-**Retrieval that knows how hard the question is.** Embeds **10K+ multi-modal documents** into a **Pathway VectorStore**, sustaining **sub-50 ms** similarity search at **95% LLM-judged precision** across 2K queries.
+  the model gets exactly one stage. everything on either side of it is code
+  that can be tested, and that is the entire trick.
+```
 
-A **Leader–Analyst multi-agent** system on GPT-4o decomposes and reconciles parallel subtasks, holding orchestration overhead to **200 ms** inside a 35–40 s p95 bounded by LLM inference.
+### 📈 [Meridian](https://github.com/GeekyAum/Meridian) · *investment research that won't spend your money*
 
-Adaptive RAG context scaling routes queries through a heuristic classifier and planner agent, doubling retrieved documents only on hard queries — **83.9% LLM-judged relevance**.
+> ```
+>  \\ //
+>  (o.o)   "it can recommend. it cannot buy. there is a
+> <(   )>   wall between those two verbs and i helped build it."
+>   ^ ^
+> ```
 
-`0.000 hallucination` under Opik LLM-judge eval
+- Ingests **5 financial sources** through **4 Kafka + Pathway** pipelines, exposing **15+ market features** over FastAPI on PostgreSQL and MongoDB.
+- Online **Hoeffding Adaptive Tree** drift detection over **300-tick sliding windows** — KL/KS divergence tests, 2-confirmation debouncing, alerts out over Kafka and SSE.
+- An **Agno + Gemini** decision service exposes **5 read-only MCP tools**, turning drift alerts into evidence-grounded paper trades behind **4 fail-closed policy gates**.
+- `260+ host tests` · `18 integration tests` · offline-first, no live broker, no real money.
 
-<sub>**Python** · **Pathway VectorStore** · **GPT-4o** · **FastAPI** · **Docker** · **Multi-Agent RAG**</sub>
+<sub>`python` `fastapi` `kafka` `pathway` `postgresql` `mongodb` `prometheus` `grafana` `docker` `agno`</sub>
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+### 🧭 [PathFin](https://github.com/GeekyAum/Dynamic-Agentic-RAG) · *retrieval that sizes you up first*
 
-### 🏏 [WittyWicket](https://github.com/GeekyAum/WittyWicket)
+> ```
+>  \\ //
+>  (o.o)   "it decides how hard your question is before
+> <(   )>   it answers. a little rude. extremely effective."
+>   ^ ^
+> ```
 
-**Live sport, narrated by agents.** A real-time commentary pipeline on **Agno** agents and **Pathway VectorStore**, converting streaming match feeds into play-by-play narration grounded in retrieved match history — so the commentary can cite what it's referring to.
+- **10K+ multi-modal documents** embedded into a **Pathway VectorStore**, holding **sub-50 ms** similarity search at **95% LLM-judged precision** over 2K queries.
+- A **Leader–Analyst multi-agent** system on GPT-4o decomposes and reconciles parallel subtasks — **200 ms** orchestration overhead inside a 35–40 s p95 that's all LLM inference.
+- Adaptive context scaling routes through a heuristic classifier and planner agent, doubling retrieved documents *only* on hard queries — **83.9% LLM-judged relevance**, `0.000` hallucination.
 
-Sport-specific ingestion sits behind a common **adapter interface**: **4 scrapers** ship today for cricket, football, basketball and tennis, and a new sport plugs in by implementing one interface.
+<sub>`python` `pathway vectorstore` `gpt-4o` `fastapi` `docker` `multi-agent rag` `opik`</sub>
 
-<sub>**Python** · **Agno** · **Pathway** · **Docker** · **Web scraping**</sub>
+### 🏏 [WittyWicket](https://github.com/GeekyAum/WittyWicket) · *live sport, narrated by agents*
 
-</td>
-<td width="50%" valign="top">
+> ```
+>  \\ //
+>  (^o^)   "this one's my favourite and i refuse to
+> <(   )>   explain why. no follow-up questions."
+>   ^ ^
+> ```
 
-### 🗄️ Elsewhere
+- Real-time commentary pipeline on **Agno** agents and **Pathway VectorStore**, turning streaming match feeds into play-by-play narration grounded in retrieved match history — it can cite the over it's talking about.
+- Sport-specific ingestion hides behind one **adapter interface**: **4 scrapers** ship today (cricket, football, basketball, tennis) and a new sport is one interface away.
 
-**[Digital-Design](https://github.com/GeekyAum/Digital-Design)** — Verilog HDL reference designs. RTL, finite state machines, FPGA fundamentals.
+<sub>`python` `agno` `pathway` `docker` `web scraping`</sub>
 
-**[narrative-core](https://github.com/GeekyAum/narrative-core)** — AI-driven storytelling system; contributing upstream.
+<details>
+<summary><b>🗄️ the shelf out back</b> — smaller things, forks, and one Verilog rabbit hole</summary>
 
-**[Portfolio](https://github.com/GeekyAum/Portfolio)** — hand-built personal site. HTML, CSS, vanilla JS, no framework, no build step.
+<br>
 
-<br/>
-
-> 🏆 **Inter IIT Tech Meet 13.0** — 8th of 23 IITs, Pathway problem statement
-> 🥇 **GC 2025 ML Hackathon**, IIT Bhubaneswar — 1st place
-
-</td>
-</tr>
-</table>
-
-<br/>
-
-## `~/experience`
-
-<details open>
-<summary><b>Google · AI Garage</b> &nbsp;—&nbsp; <i>Software Engineering Intern</i> &nbsp;·&nbsp; Hyderabad &nbsp;·&nbsp; May – Aug 2026</summary>
-
-<br/>
-
-- Architected a **Python SDK for multi-party calendar negotiation** on a **hexagonal (ports-and-adapters)** architecture — event-command design with **6 swappable adapters**, across **60+ peer-reviewed changelists**.
-- Built the negotiation core on **dual finite-state machines** with multi-round consensus, eliminating double-booking race conditions via **Try-Confirm-Cancel** reservations and auto-expiring pessimistic locks.
-- Shipped the SDK into an internal scheduling app through a **3-node Google ADK workflow** wiring **Google Calendar REST APIs**, **OAuth 2.0**, Pydantic validation, **Gemini** reasoning and **Cloud Spanner** persistence.
-- Hardened reliability with unit and **polymorphic contract tests**; profiled **P90 latency**, token throughput and **cProfile** to hold **sub-100 ms** SDK overhead and isolate LLM inference as the dominant bottleneck.
+- **[Digital-Design](https://github.com/GeekyAum/Digital-Design)** — Verilog HDL reference designs. RTL, finite state machines, FPGA fundamentals. The ECE degree occasionally demands tribute.
+- **[narrative-core](https://github.com/GeekyAum/narrative-core)** — AI-driven storytelling system, contributing upstream.
+- **[Portfolio](https://github.com/GeekyAum/Portfolio)** — hand-built personal site. HTML, CSS, vanilla JS. No framework, no build step, no regrets.
 
 </details>
 
-<br/>
+<br>
 
-## `~/stack`
+<a id="google"></a>
+## `[3]` the google thing
 
-<table>
-<tr>
-<td valign="top" width="34%">
+```console
+$ cat ~/experience/google-ai-garage.md
 
-**AI &amp; agents**
+  Software Engineering Intern · AI Garage · Hyderabad · May – Aug 2026
+```
 
-<img src="https://img.shields.io/badge/PyTorch-090A0D?style=flat-square&logo=pytorch&logoColor=FFB454" alt="PyTorch"/>
-<img src="https://img.shields.io/badge/Hugging%20Face-090A0D?style=flat-square&logo=huggingface&logoColor=FFB454" alt="Hugging Face"/>
-<img src="https://img.shields.io/badge/LangChain-090A0D?style=flat-square&logo=langchain&logoColor=56E0C8" alt="LangChain"/>
-<img src="https://img.shields.io/badge/LangGraph-090A0D?style=flat-square&logo=langgraph&logoColor=56E0C8" alt="LangGraph"/>
-<img src="https://img.shields.io/badge/Gemini-090A0D?style=flat-square&logo=googlegemini&logoColor=56E0C8" alt="Gemini"/>
-<img src="https://img.shields.io/badge/Agno-090A0D?style=flat-square&logoColor=D6DAE3" alt="Agno"/>
-<img src="https://img.shields.io/badge/Multi--Agent%20RAG-090A0D?style=flat-square&logoColor=D6DAE3" alt="Multi-Agent RAG"/>
+- Architected a **Python SDK for multi-party calendar negotiation** on a **hexagonal (ports-and-adapters)** architecture — event-command design, **6 swappable adapters**, **60+ peer-reviewed changelists**.
+- Built the negotiation core on **dual finite-state machines** with multi-round consensus, killing double-booking race conditions via **Try-Confirm-Cancel** reservations and auto-expiring pessimistic locks.
+- Shipped it into an internal scheduling app through a **3-node Google ADK workflow** wiring **Google Calendar REST APIs**, **OAuth 2.0**, Pydantic validation, **Gemini** reasoning and **Cloud Spanner** persistence.
+- Hardened it with unit and **polymorphic contract tests**; profiled **P90 latency**, token throughput and **cProfile** to hold **sub-100 ms** SDK overhead — and to prove the LLM was the bottleneck, not the code.
 
-</td>
-<td valign="top" width="33%">
+```
+   \\ //
+   (o_O)   "two state machines, in a calendar app, so that
+  <(   )>   nobody double-books a meeting room. i think about
+    ^ ^     this more than a cricket reasonably should."
+```
 
-**Backend &amp; data**
+<br>
 
-<img src="https://img.shields.io/badge/Python-090A0D?style=flat-square&logo=python&logoColor=FFB454" alt="Python"/>
-<img src="https://img.shields.io/badge/C++-090A0D?style=flat-square&logo=cplusplus&logoColor=56E0C8" alt="C++"/>
-<img src="https://img.shields.io/badge/FastAPI-090A0D?style=flat-square&logo=fastapi&logoColor=56E0C8" alt="FastAPI"/>
-<img src="https://img.shields.io/badge/Kafka-090A0D?style=flat-square&logo=apachekafka&logoColor=D6DAE3" alt="Kafka"/>
-<img src="https://img.shields.io/badge/PostgreSQL-090A0D?style=flat-square&logo=postgresql&logoColor=56E0C8" alt="PostgreSQL"/>
-<img src="https://img.shields.io/badge/MongoDB-090A0D?style=flat-square&logo=mongodb&logoColor=56E0C8" alt="MongoDB"/>
-<img src="https://img.shields.io/badge/Pathway-090A0D?style=flat-square&logoColor=D6DAE3" alt="Pathway"/>
-<img src="https://img.shields.io/badge/OAuth%202.0-090A0D?style=flat-square&logo=auth0&logoColor=FFB454" alt="OAuth 2.0"/>
+<a id="stack"></a>
+## `[4]` what he can actually do
 
-</td>
-<td valign="top" width="33%">
+```
+~/stack
+│
+├── ai/
+│   ├── agents      agno · langgraph · langchain · multi-agent orchestration
+│   ├── models      gemini · gpt-4o · pytorch · hugging face
+│   └── retrieval   pathway vectorstore · adaptive rag · opik llm-judge eval
+│
+├── backend/
+│   ├── languages   python · c++ · sql          (familiar: c, js, ts, protobuf)
+│   ├── serving     fastapi · rest · oauth 2.0 · google adk
+│   └── data        kafka · postgresql · mongodb · cloud spanner
+│
+├── ops/
+│   └── docker · git · prometheus · grafana
+│
+├── cs/
+│   └── dsa · oop · operating systems · database systems
+│
+└── silicon/
+    └── verilog · rtl · fsm design       # not a job requirement. still fun.
+```
 
-**Ops &amp; silicon**
+<br>
 
-<img src="https://img.shields.io/badge/Docker-090A0D?style=flat-square&logo=docker&logoColor=56E0C8" alt="Docker"/>
-<img src="https://img.shields.io/badge/Prometheus-090A0D?style=flat-square&logo=prometheus&logoColor=FFB454" alt="Prometheus"/>
-<img src="https://img.shields.io/badge/Grafana-090A0D?style=flat-square&logo=grafana&logoColor=FFB454" alt="Grafana"/>
-<img src="https://img.shields.io/badge/Google%20ADK-090A0D?style=flat-square&logo=googlecloud&logoColor=56E0C8" alt="Google ADK"/>
-<img src="https://img.shields.io/badge/Git-090A0D?style=flat-square&logo=git&logoColor=FFB454" alt="Git"/>
-<img src="https://img.shields.io/badge/TypeScript-090A0D?style=flat-square&logo=typescript&logoColor=56E0C8" alt="TypeScript"/>
-<img src="https://img.shields.io/badge/Verilog-090A0D?style=flat-square&logoColor=A07CFF" alt="Verilog"/>
+<a id="proof"></a>
+## `[5]` receipts
 
-</td>
-</tr>
-</table>
+```diff
++ Inter IIT Tech Meet 13.0        8th of 23 IITs — Pathway problem statement    Dec 2024
++ General Championship 2025       1st place, ML Hackathon, IIT Bhubaneswar      Mar 2025
+! Student Internship Coordinator  Career Development Cell, IIT BBS         Apr '25 – Mar '26
+! Governor                        Society of Finance, Economics, Business
+                                  and Data Science, IIT BBS                Apr '25 – Mar '26
+```
 
-<br/>
+<br>
 
-## `~/signal`
+<a id="contact"></a>
+## `[6]` how to reach him
 
-<div align="center">
+```
+   \\ //
+   (o.o)   "he answers email. he is a student. of course he answers email."
+  <(   )>
+    ^ ^
+```
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=GeekyAum&show_icons=true&hide_border=true&include_all_commits=true&bg_color=090A0D&title_color=FFB454&text_color=D6DAE3&icon_color=56E0C8&ring_color=FFB454" alt="GitHub stats"/>
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=GeekyAum&layout=compact&langs_count=8&hide_border=true&bg_color=090A0D&title_color=FFB454&text_color=D6DAE3" alt="Top languages"/>
+**Open to internships and full-time roles** in AI engineering and backend systems.
+If you're building something that has to think *and* has to be right — that's the interesting part.
 
-</div>
+| | |
+|---|---|
+| 📮 **email** | [23ec01005@iitbbs.ac.in](mailto:23ec01005@iitbbs.ac.in) |
+| 💼 **linkedin** | [in/aumvyas](https://linkedin.com/in/aumvyas) |
+| 🐙 **github** | [@GeekyAum](https://github.com/GeekyAum) |
 
-<br/>
+<br>
 
-## `~/contact`
+---
 
-Open to **internships and full-time roles** in AI engineering and backend systems.
-If you're building something that has to think — and has to be right — I'd like to hear about it.
+<details>
+<summary><b>🦗 poke chip</b></summary>
 
-<div align="center">
-<br/>
+<br>
 
-<a href="mailto:23ec01005@iitbbs.ac.in"><img src="https://img.shields.io/badge/Email-FFB454?style=for-the-badge&logo=maildotru&logoColor=090A0D&labelColor=FFB454" alt="Email"/></a>
-<a href="https://linkedin.com/in/aumvyas"><img src="https://img.shields.io/badge/LinkedIn-090A0D?style=for-the-badge&logo=linkedin&logoColor=56E0C8&labelColor=090A0D" alt="LinkedIn"/></a>
-<a href="https://github.com/GeekyAum"><img src="https://img.shields.io/badge/GitHub-090A0D?style=for-the-badge&logo=github&logoColor=D6DAE3&labelColor=090A0D" alt="GitHub"/></a>
+```
+   \\ //
+   (>_<)   "OW."
+  <(   )>
+    ^ ^
 
-<br/><br/>
+   \\ //
+   (-_-)   "...fine. a fact, and then you leave me alone:
+  <(   )>   'crickets' is what you hear when a repo has no commits.
+    ^ ^     i am, structurally, a threat. behave."
+```
 
-<sub><code>Student Internship Coordinator · Career Development Cell, IIT Bhubaneswar</code></sub><br/>
-<sub><code>Governor · Society of Finance, Economics, Business and Data Science</code></sub>
+</details>
 
-</div>
+<details>
+<summary><b>🤔 why a cricket, though</b></summary>
+
+<br>
+
+Three reasons, and they're all the same reason:
+
+1. **WittyWicket** does live *cricket* commentary.
+2. He's an **ECE** student — so the pet is named **Chip**.
+3. 🦗 is the universal sound of a dead repository. Keeping one alive on the profile felt like the right kind of threat.
+
+```
+   \\ //
+   (^_^)   "the third one is the real one."
+  <(   )>
+    ^ ^
+```
+
+</details>
+
+<details>
+<summary><b>📄 recruiter mode</b> — the same page, with the cricket removed</summary>
+
+<br>
+
+**Aum Vyas** — B.Tech Electronics & Communication Engineering, IIT Bhubaneswar (2023–2027), CGPA 8.98/10.
+
+**Experience** — Software Engineering Intern, Google AI Garage, Hyderabad (May–Aug 2026). Architected a Python SDK for multi-party calendar negotiation using hexagonal architecture with 6 swappable adapters across 60+ peer-reviewed changelists; built a dual-FSM negotiation core with Try-Confirm-Cancel reservations; shipped via a 3-node Google ADK workflow over Google Calendar APIs, OAuth 2.0, Gemini and Cloud Spanner; held sub-100 ms SDK overhead under P90 latency profiling.
+
+**Projects** — *Meridian*: real-time investment research platform, 5 data sources, 4 Kafka/Pathway pipelines, Hoeffding-tree drift detection, agentic decision layer behind 4 fail-closed gates, 260+ tests. *PathFin*: agentic RAG over 10K+ documents, sub-50 ms retrieval at 95% precision, Leader–Analyst multi-agent orchestration at 200 ms overhead, 83.9% LLM-judged relevance. *WittyWicket*: real-time AI sports commentary on Agno and Pathway, adapter-based ingestion across 4 sports.
+
+**Skills** — Python, C++, SQL (adept); C, JavaScript, TypeScript, HTML/CSS, Protocol Buffers (familiar). FastAPI, REST, OAuth 2.0, Kafka, Cloud Spanner, PostgreSQL, MongoDB. Docker, Git, Google ADK, Prometheus, Grafana, Pathway. PyTorch, Hugging Face, LangChain, LangGraph, Agno, RAG, multi-agent systems. Verilog, RTL, FSM design.
+
+**Achievements** — Inter IIT Tech Meet 13.0: 8th of 23 IITs (Pathway). GC 2025 ML Hackathon, IIT Bhubaneswar: 1st place.
+
+**Contact** — [23ec01005@iitbbs.ac.in](mailto:23ec01005@iitbbs.ac.in) · [linkedin.com/in/aumvyas](https://linkedin.com/in/aumvyas)
+
+</details>
+
+<br>
+
+```
+                                    \\ //
+   chip's hunger    ▓▓▓▓▓▓▓░░░      (-.-)  zZ
+   feed him by starring a repo     <(   )>
+                                     ^ ^
+```
